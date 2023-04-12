@@ -1,4 +1,4 @@
-import { MapContainer, Marker, TileLayer} from 'react-leaflet';
+import { MapContainer, TileLayer} from 'react-leaflet';
 import React from 'react';
 import L from 'leaflet';
 import markerIcon from '../images/icon-location.svg';
