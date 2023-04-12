@@ -21,9 +21,7 @@ const Map = ({coords}) => {
         if(map !== null){
             map?.setView(coords, 13)
             L.marker(coords, {icon: myIcon}).addTo(map)
-            // map?.setMarker()
         }
-        console.log(map)
     }, [coords, map])
 
     const displayMap = React.useMemo(
@@ -34,18 +32,12 @@ const Map = ({coords}) => {
                 scrollWheelZoom={false} 
                 ref={setMap}
             >
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            {/* <Marker 
-                position={coords}
-                icon={myIcon}
-
-            /> */}
-        </MapContainer>
-        ),
-        [],
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+            </MapContainer>
+        ), []
     )
 
     return (
