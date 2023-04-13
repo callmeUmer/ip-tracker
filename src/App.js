@@ -6,7 +6,7 @@ import axios from 'axios';
 const App = () => {
   const [ip, changeIPAdress] = React.useState("");
   const [res, changeRes] = React.useState({})
-  const url = "http://ip-api.com/json/"
+  const url = "https://ip-api.com/json/"
   
   const getData = async (ip = "") => {
     const res = await axios.get(url + ip)
